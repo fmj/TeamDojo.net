@@ -47,6 +47,11 @@ namespace XmlParser.Class
 
         }
 
+        public string GetRubyList()
+        {
+            return string.Format("\"{0}\"  => {1} ,", name, currentKudus.ToString("f2").Replace(',','.'));
+        }
+
         public string GetXMlRepr(List<Programmer> progs)
         {
             string temp =
