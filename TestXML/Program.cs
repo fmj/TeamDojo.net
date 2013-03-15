@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using XmlParser.Class;
@@ -25,14 +26,31 @@ namespace TestXML
             {
                 prog.ForEach(p => p.UpdateOldKudusFromCurrent());
                 prog.ForEach(p => p.GetKudos(prog));
-
-                Print();
-                Console.ReadLine();
             }  while (prog.Count(m=> !m.Delta()) > 0);
            
 
             Console.WriteLine("Result");
-            Console.ReadLine();
+            Print();
+            Console.WriteLine("Yes for write");
+            string input = Console.ReadLine();
+            StringBuilder fullFile = new StringBuilder();
+            if (input != null && input.ToUpper() == "YES")
+            {
+                fullFile.Append(
+                    "<?xml version=\"1.0\" encoding=\"utf-8\" ?><?xml-stylesheet type=\"text/xsl\" href=\"xslt/Display.xslt\"?><Network>");
+                foreach(var p in prog)
+                    fullFile.Append( p.GetXMlRepr(prog));
+                fullFile.Append("</Network>");
+            }
+            using (
+                StreamWriter sw =
+                    new StreamWriter(
+                        File.OpenWrite(Path.Combine(new FileInfo(@"C:\Projects\TeamDojo\src\ProNet.xml").DirectoryName,
+                                                    "ProNet" + System.Guid.NewGuid() + ".xml"))))
+            {
+                sw.Write(fullFile.ToString());
+                sw.Close();
+            }
         }
 
         static void Print()

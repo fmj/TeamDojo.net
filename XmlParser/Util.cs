@@ -31,7 +31,7 @@ namespace XmlParser
             for (int i = 0; i < retval.Count; i++)
             {
                 foreach(string s in retval[i].links)
-                    retval.ElementAt(i).Recommendations.Add(i);
+                    retval.ElementAt(i).Recommendations.Add(retval.IndexOf(retval.Where(m=> m.name == s).First()));
             }
        
 
