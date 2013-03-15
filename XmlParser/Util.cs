@@ -21,8 +21,6 @@ namespace XmlParser
                                       name = item.Attribute("name").Value,
                                       skills = item.Descendants("Skills").Descendants("Skill").Select(m => m.Value).ToList(),
                                       links = item.Descendants("Recommendations").Descendants("Recommendation").Select(m => m.Value).ToList()
-
-                                      //.Aggregate((current, result) => current + "," + result));
                                   };
 
             List<Programmer> retval = new List<Programmer>();
@@ -35,21 +33,12 @@ namespace XmlParser
                 foreach(string s in retval[i].links)
                     retval.ElementAt(i).Recommendations.Add(i);
             }
-            //Programmer ret = ((Programmer)p);
-            //foreach (string linkName in ret.links)
-            //{
-            //    ret.Recommendations.Add(programmers.Where(m => m.name == linkName).First());
-            //}
+       
 
             for (int i = 0; i < retval.Count(); i++)
             {
                 foreach(var tmpProg in retval.Where(m => m.links.Contains(retval.ElementAt(i).name)))
                     retval.ElementAt(i).RecommendedBy.Add(retval.IndexOf(tmpProg));
-               // var tmpProg = retval.Where(m => m.links.Contains(retval.ElementAt(i).name));
-
-                //retval.ElementAt(i).RecommendedBy.AddRange(retval.Where(m=> m.links.Contains(retval.ElementAt(i).name)));
-                //retval.ElementAt(i).RecommendedBy.AddRange();
-
             }
             return retval;
         }

@@ -23,12 +23,11 @@ namespace TestXML
             //First run
             do
             {
+                prog.ForEach(p => p.UpdateOldKudusFromCurrent());
                 prog.ForEach(p => p.GetKudos(prog));
 
                 Print();
                 Console.ReadLine();
-                prog.ForEach(p => p.UpdateOldKudusFromCurrent());
-                
             }  while (prog.Count(m=> !m.Delta()) > 0);
            
 

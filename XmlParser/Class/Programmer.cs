@@ -43,15 +43,6 @@ namespace XmlParser.Class
 
         public override string ToString()
         {
-            //return name + "(links : " + links.Count + " " + Recommendations.Count +  ")" + " " + RecommendedBy.Count;
-            //StringBuilder sb = new StringBuilder();
-            //sb.Append("Name: " + name + Environment.NewLine);
-            //foreach (var r in Recommendations)
-            //    sb.Append("Recommends: " + r.name + Environment.NewLine);
-            //foreach (var req in RecommendedBy)
-            //    sb.Append("Recommended by: " + req.name + Environment.NewLine);
-            //return sb.ToString();
-
             return name + " " + currentKudus + " " + oldKudus;
 
         }
