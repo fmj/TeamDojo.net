@@ -12,7 +12,7 @@ namespace TestXML
         static void Main(string[] args)
         {
             prog = XmlParser.Util.GetProgrammersFromXmlFile(@"C:\Projects\TeamDojo\src\ProNet.xml");
-            
+
 
             foreach (var p in prog)
             {
@@ -21,12 +21,19 @@ namespace TestXML
             }
             Print();
             //First run
-            while(true)
+            do
             {
-            prog.ForEach(p => p.GetKudos());
-            Print();
+                prog.ForEach(p => p.GetKudos(prog));
+
+                Print();
+                Console.ReadLine();
+                prog.ForEach(p => p.UpdateOldKudusFromCurrent());
+                
+            }  while (prog.Count(m=> !m.Delta()) > 0);
+           
+
+            Console.WriteLine("Result");
             Console.ReadLine();
-            }
         }
 
         static void Print()

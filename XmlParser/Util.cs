@@ -28,22 +28,30 @@ namespace XmlParser
             List<Programmer> retval = new List<Programmer>();
             foreach (var p in programmers)
             {
-                Programmer ret = ((Programmer) p);
-                foreach (string linkName in ret.links)
-                {
-                    ret.Recommendations.Add(programmers.Where(m=> m.name == linkName).First());
-                }
-                retval.Add(ret);
+                retval.Add(p);
             }
+            for (int i = 0; i < retval.Count; i++)
+            {
+                foreach(string s in retval[i].links)
+                    retval.ElementAt(i).Recommendations.Add(i);
+            }
+            //Programmer ret = ((Programmer)p);
+            //foreach (string linkName in ret.links)
+            //{
+            //    ret.Recommendations.Add(programmers.Where(m => m.name == linkName).First());
+            //}
 
             for (int i = 0; i < retval.Count(); i++)
             {
-                retval.ElementAt(i).RecommendedBy.AddRange(retval.Where(m=> m.links.Contains(retval.ElementAt(i).name)));
+                foreach(var tmpProg in retval.Where(m => m.links.Contains(retval.ElementAt(i).name)))
+                    retval.ElementAt(i).RecommendedBy.Add(retval.IndexOf(tmpProg));
+               // var tmpProg = retval.Where(m => m.links.Contains(retval.ElementAt(i).name));
+
+                //retval.ElementAt(i).RecommendedBy.AddRange(retval.Where(m=> m.links.Contains(retval.ElementAt(i).name)));
+                //retval.ElementAt(i).RecommendedBy.AddRange();
 
             }
-
-
-                return retval;
+            return retval;
         }
     }
 }
