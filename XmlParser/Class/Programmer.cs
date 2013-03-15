@@ -47,6 +47,27 @@ namespace XmlParser.Class
 
         }
 
+        public string GetXMlRepr(List<Programmer> progs)
+        {
+            string temp =
+                "<Programmer name='{0}'><Recommendations>{1}</Recommendations><Skills>{2}</Skills><Kudos>{3}</Kudos>{4}</Programmer>";
+            StringBuilder sb = new StringBuilder();
+            foreach (var index in Recommendations)
+            {
+                sb.Append(string.Format("<Recommendation>{0}</Recommendation>", progs.ElementAt(index).name));
+            }
+            StringBuilder recBy = new StringBuilder();
+            recBy.Append("<RecommendedBy>");
+            foreach (var index in RecommendedBy)
+            {
+                recBy.Append(string.Format("<RecommendedBy>{0}</RecommendedBy>", progs.ElementAt(index).name));
+            }
+
+            return string.Format(temp,name,sb.ToString(),"",currentKudus,recBy.ToString())
+
+            
+        }
+
         public void GetKudos(List<Programmer> lst )
         {
             double kudos = 0;

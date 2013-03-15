@@ -42,5 +42,10 @@ namespace XmlParser
             }
             return retval;
         }
+
+        public static void PersistXML(string filepath)
+        {
+            
+        }
     }
 }
