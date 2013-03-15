@@ -1,0 +1,11 @@
+C:\Projects\TeamDojo.Net\ShowKudos\bin\Debug\ShowKudos.exe
+C:\Projects\TeamDojo.Net\ShowKudos\bin\Debug\ShowKudos.pdb
+C:\Projects\TeamDojo.Net\ShowKudos\bin\Debug\XmlParser.dll
+C:\Projects\TeamDojo.Net\ShowKudos\bin\Debug\XmlParser.pdb
+C:\Projects\TeamDojo.Net\ShowKudos\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projects\TeamDojo.Net\ShowKudos\obj\x86\Debug\ShowKudos.Form1.resources
+C:\Projects\TeamDojo.Net\ShowKudos\obj\x86\Debug\ShowKudos.Properties.Resources.resources
+C:\Projects\TeamDojo.Net\ShowKudos\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Projects\TeamDojo.Net\ShowKudos\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Projects\TeamDojo.Net\ShowKudos\obj\x86\Debug\ShowKudos.exe
+C:\Projects\TeamDojo.Net\ShowKudos\obj\x86\Debug\ShowKudos.pdb
