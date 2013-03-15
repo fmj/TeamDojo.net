@@ -63,9 +63,15 @@ namespace XmlParser.Class
                 recBy.Append(string.Format("<RecommendedBy>{0}</RecommendedBy>", progs.ElementAt(index).name));
             }
 
-            return string.Format(temp,name,sb.ToString(),"",currentKudus,recBy.ToString())
+            StringBuilder skillsb = new StringBuilder();
+            foreach (var skill in skills)
+            {
+                skillsb.Append(string.Format("<Skill>{0}</Skill>", skill));
+            }
 
-            
+            return string.Format(temp, name, sb.ToString(), skillsb.ToString(), currentKudus, recBy.ToString());
+
+
         }
 
         public void GetKudos(List<Programmer> lst )
