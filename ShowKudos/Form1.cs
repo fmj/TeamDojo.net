@@ -24,7 +24,7 @@ namespace ShowKudos
             {
                 filePath = file.FileName;
                 textBox1.Text = filePath;
-                button2_Click(sender,e);
+                button2_Click(sender, e);
             }
 
         }
@@ -47,10 +47,10 @@ namespace ShowKudos
             {
                 prog.ForEach(p => p.UpdateOldKudusFromCurrent());
                 prog.ForEach(p => p.GetKudos(prog));
-            } while (prog.Count(m => !m.Delta()) > 0); 
+            } while (prog.Count(m => !m.Delta()) > 0);
 
-            foreach(var p in  prog.OrderByDescending(m => m.currentKudus).ToList())
+            foreach (var p in prog.OrderByDescending(m => m.currentKudus).ToList())
                 txtRes.Text += p.name + "\t" + p.currentKudus.ToString("f2") + Environment.NewLine;
-                }
+        }
     }
 }
