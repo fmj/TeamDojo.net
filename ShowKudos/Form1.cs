@@ -11,9 +11,24 @@ namespace ShowKudos
 {
     public partial class Form1 : Form
     {
+        private string filePath = "";
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                filePath = file.FileName;
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<XmlParser.Class.Programmer> prog = XmlParser.Util.GetProgrammersFromXmlFile(filePath);
         }
     }
 }
