@@ -1,0 +1,7 @@
+C:\Projects\TeamDojo.Net\TestXML\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projects\TeamDojo.Net\TestXML\bin\Debug\TestXML.exe
+C:\Projects\TeamDojo.Net\TestXML\bin\Debug\TestXML.pdb
+C:\Projects\TeamDojo.Net\TestXML\bin\Debug\XmlParser.dll
+C:\Projects\TeamDojo.Net\TestXML\bin\Debug\XmlParser.pdb
+C:\Projects\TeamDojo.Net\TestXML\obj\x86\Debug\TestXML.exe
+C:\Projects\TeamDojo.Net\TestXML\obj\x86\Debug\TestXML.pdb
