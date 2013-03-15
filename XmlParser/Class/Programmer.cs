@@ -13,6 +13,8 @@ namespace XmlParser.Class
             oldKudus = currentKudus;
         }
 
+        public static List<Programmer> fullList = new List<Programmer>();
+ 
         public static double DampeningValue = 0.85;
 
         public Programmer()
