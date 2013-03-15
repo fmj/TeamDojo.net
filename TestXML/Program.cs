@@ -20,7 +20,7 @@ namespace TestXML
                 p.currentKudus = 1;
                 p.oldKudus = 1;
             }
-            Print();
+            //Print();
             //First run
             do
             {
@@ -30,7 +30,12 @@ namespace TestXML
 
 
             Console.WriteLine("Result");
-            Print();
+            //Print();
+
+            var list = prog.OrderByDescending(m => m.currentKudus).ToList();
+            foreach(var p in list)
+                Console.WriteLine(p.name + "\t" + p.currentKudus);
+
             Console.WriteLine("Yes for write");
             string input = Console.ReadLine();
             StringBuilder fullFile = new StringBuilder();
