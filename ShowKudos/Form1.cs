@@ -24,6 +24,7 @@ namespace ShowKudos
             {
                 filePath = file.FileName;
                 textBox1.Text = filePath;
+                button2_Click(sender,e);
             }
 
         }
@@ -35,10 +36,21 @@ namespace ShowKudos
                 MessageBox.Show("Choose a file first please.");
                 return;
             }
+            txtRes.Text = "";
             List<XmlParser.Class.Programmer> prog = XmlParser.Util.GetProgrammersFromXmlFile(filePath);
-             
+            foreach (var p in prog)
+            {
+                p.currentKudus = 1;
+                p.oldKudus = 1;
+            }
+            do
+            {
+                prog.ForEach(p => p.UpdateOldKudusFromCurrent());
+                prog.ForEach(p => p.GetKudos(prog));
+            } while (prog.Count(m => !m.Delta()) > 0); 
+
             foreach(var p in  prog.OrderByDescending(m => m.currentKudus).ToList())
-                txtRes.Text += p.name + "\t" + p.currentKudus + Environment.NewLine;
+                txtRes.Text += p.name + "\t" + p.currentKudus.ToString("f2") + Environment.NewLine;
                 }
     }
 }

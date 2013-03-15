@@ -1,0 +1,7 @@
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\TestXML\bin\Release\TestXML.exe
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\TestXML\bin\Release\TestXML.pdb
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\TestXML\bin\Release\XmlParser.dll
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\TestXML\bin\Release\XmlParser.pdb
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\TestXML\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\TestXML\obj\x86\Release\TestXML.exe
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\TestXML\obj\x86\Release\TestXML.pdb

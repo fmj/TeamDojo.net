@@ -1,0 +1,11 @@
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\bin\Release\ShowKudos.exe
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\bin\Release\ShowKudos.pdb
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\bin\Release\XmlParser.dll
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\bin\Release\XmlParser.pdb
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\obj\x86\Release\ShowKudos.Form1.resources
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\obj\x86\Release\ShowKudos.Properties.Resources.resources
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\obj\x86\Release\ShowKudos.exe
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\ShowKudos\obj\x86\Release\ShowKudos.pdb

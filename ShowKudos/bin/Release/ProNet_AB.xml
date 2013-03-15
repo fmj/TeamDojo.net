@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="xslt\Display.xslt"?>
+<Network>
+  <Programmer name='A'>
+    <Recommendations>
+      <Recommendation>B</Recommendation>
+    </Recommendations>
+    <Skills>
+      <Skill>Ruby</Skill>
+      <Skill>Perl</Skill>
+      <Skill>PHP</Skill>
+    </Skills>
+  </Programmer>
+  <Programmer name='B'>
+    <Recommendations>
+      <Recommendation>A</Recommendation>
+    </Recommendations>
+    <Skills>
+      <Skill>Java</Skill>
+      <Skill>C#</Skill>
+    </Skills>
+  </Programmer>
+</Network>

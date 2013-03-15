@@ -1,0 +1,5 @@
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\XmlParser\bin\Release\XmlParser.dll
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\XmlParser\bin\Release\XmlParser.pdb
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\XmlParser\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\XmlParser\obj\Release\XmlParser.dll
+C:\Projects\TeamDojo.net_Zombies\TeamDojo.net\XmlParser\obj\Release\XmlParser.pdb
