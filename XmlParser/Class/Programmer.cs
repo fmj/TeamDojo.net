@@ -15,9 +15,9 @@ namespace XmlParser.Class
             RecommendedBy = new List<Programmer>();
         }
 
-        private int _currentKudus = 0;
+        private double _currentKudus = 0;
 
-        public int currentKudus
+        public double currentKudus
         {
             get { return _currentKudus; }
             set
@@ -26,7 +26,7 @@ namespace XmlParser.Class
                 _currentKudus = value;
             }
         }
-        public int oldKudus { get; set; }
+        public double oldKudus { get; set; }
 
         public string name { get; set; }
         public List<string> links { get; set; }
@@ -38,19 +38,26 @@ namespace XmlParser.Class
         public override string ToString()
         {
             //return name + "(links : " + links.Count + " " + Recommendations.Count +  ")" + " " + RecommendedBy.Count;
-            StringBuilder sb = new StringBuilder();
-            sb.Append("Name: " + name + Environment.NewLine);
-            foreach (var r in Recommendations)
-                sb.Append("Recommends: " + r.name + Environment.NewLine);
-            foreach (var req in RecommendedBy)
-                sb.Append("Recommended by: " + req.name + Environment.NewLine);
-            return sb.ToString();
+            //StringBuilder sb = new StringBuilder();
+            //sb.Append("Name: " + name + Environment.NewLine);
+            //foreach (var r in Recommendations)
+            //    sb.Append("Recommends: " + r.name + Environment.NewLine);
+            //foreach (var req in RecommendedBy)
+            //    sb.Append("Recommended by: " + req.name + Environment.NewLine);
+            //return sb.ToString();
+
+            return name + " " + currentKudus + " " + oldKudus;
 
         }
 
-        public double GetKudos(int dampening)
+        public void GetKudos()
         {
-            return 0.0;
+            double kudos = oldKudus;
+            //Add all incoming links 
+            foreach (var p in RecommendedBy)
+                kudos += (double)p.oldKudus/p.Recommendations.Count;
+            kudos += (1 - Programmer.DampeningValue) + Programmer.DampeningValue*kudos;
+            currentKudus = kudos;
         }
     }
 }
